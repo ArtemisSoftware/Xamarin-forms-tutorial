@@ -6,5 +6,9 @@
              mc:Ignorable="d"
              x:Class="Tutorial1.GreetPage">
 
-    <Button HorizontalOptions="Center" VerticalOptions="Center" Text="Click Me" Clicked="Button_Clicked"></Button>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label  Text="Hello World" x:Name="label"></Label>
+        <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"></Slider>
+    </StackLayout>
+
 </ContentPage>
