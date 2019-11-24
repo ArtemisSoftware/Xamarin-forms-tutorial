@@ -10,7 +10,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new GridPage();
+            MainPage = new AbsolutePage();
         }
 
         protected override void OnStart()
