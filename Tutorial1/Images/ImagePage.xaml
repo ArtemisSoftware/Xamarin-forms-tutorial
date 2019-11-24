@@ -4,6 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Tutorial1.Images.ImagePage">
-    <Image x:Name="image" Aspect="AspectFill"/>
+             x:Class="Tutorial1.Images.ImagePage"
+             BackgroundColor="Black">
+    <AbsoluteLayout>
+        <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional" BackgroundColor="White"/>
+        <Image x:Name="image" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0, 0, 1 , 1" AbsoluteLayout.LayoutFlags="All"/>
+    </AbsoluteLayout>
+    
 </ContentPage>
