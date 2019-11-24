@@ -6,11 +6,12 @@
              mc:Ignorable="d"
              x:Class="Tutorial1.GreetPage">
 
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label  Text="{Binding 
-            Source={x:Reference slider}, 
-            Path=Value, 
-            StringFormat='Value is {0:F2}' }" x:Name="label"></Label>
+    <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="Center" VerticalOptions="Center">
+
+        <BoxView Color="Green" Opacity="{Binding Value}"></BoxView>
+        
+        <Label Text="{Binding Value, StringFormat='Value is {0:F2}' }" 
+               Opacity="{Binding Value}"></Label>
         <Slider x:Name="slider"></Slider>
     </StackLayout>
 
