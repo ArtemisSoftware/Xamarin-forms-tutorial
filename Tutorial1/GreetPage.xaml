@@ -6,6 +6,14 @@
              mc:Ignorable="d"
              x:Class="Tutorial1.GreetPage">
 
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 40, 0, 0"></OnPlatform>
+    </ContentPage.Padding>
+    
+
+
     <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="Center" VerticalOptions="Center">
 
         <BoxView Color="Green" Opacity="{Binding Value}"></BoxView>
