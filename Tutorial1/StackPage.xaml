@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Tutorial1.StackPage"
+             Padding="0, 20, 0 , 0">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="40" Orientation="Horizontal">
+
+        <StackLayout>
+            <Image x:Name="img" Source="https://s3.amazonaws.com/demos.transloadit.com/c8/37b300bb2f11e7b1f79f2496986db8/chameleon.jpg" />
+            <Label Text="label 1"/>
+        </StackLayout>
+        
+        <Label Text="label 2"></Label>
+        <Label Text="label 3"></Label>
+    </StackLayout>
+    
+        
+    
+</ContentPage>
