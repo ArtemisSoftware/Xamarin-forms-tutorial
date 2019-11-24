@@ -1,4 +1,5 @@
 ﻿using System;
+using Tutorial1.Images;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new RelativePage();
+            MainPage = new ImagePage();
         }
 
         protected override void OnStart()
