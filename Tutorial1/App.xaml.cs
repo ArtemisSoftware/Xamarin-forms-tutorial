@@ -10,7 +10,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new GreetPage();
+            MainPage = new RelativePage();
         }
 
         protected override void OnStart()
