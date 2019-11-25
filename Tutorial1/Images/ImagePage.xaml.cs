@@ -15,11 +15,8 @@ namespace Tutorial1.Images
         public ImagePage()
         {
             InitializeComponent();
-            
-            var imageSource = new UriImageSource { Uri = new Uri("https://lorempixel.com/1920/1080/sports/7/") };
-            imageSource.CachingEnabled = false;
-            image.Source = imageSource;
 
+            image.Source = ImageSource.FromResource("Tutorial1.Images.Pictures.background.jpg");
         
         }
     }
