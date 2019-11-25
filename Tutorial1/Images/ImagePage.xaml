@@ -6,6 +6,6 @@
              xmlns:local="clr-namespace:Tutorial1.MarkupExtensions"
              mc:Ignorable="d"
              x:Class="Tutorial1.Images.ImagePage">
-    <Image Source="{local:EmbeddedImage Tutorial1.Images.Pictures.background.jpg}"  x:Name="image" Aspect="AspectFill"/>
+    <Button ImageSource="clock.png"></Button>
     
 </ContentPage>
