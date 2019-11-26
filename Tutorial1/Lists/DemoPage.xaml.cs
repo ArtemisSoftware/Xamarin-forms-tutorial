@@ -19,17 +19,23 @@ namespace Tutorial1.Lists
         public DemoPage()
         {
             InitializeComponent();
+            listView.ItemsSource = GetContacts();
 
-            _contacts = new ObservableCollection<Contact>
+        }
+
+
+        ObservableCollection<Contact> GetContacts()
+        {
+            return new ObservableCollection<Contact>
             {
                 new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/200/202" },
                 new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/200/201", Status = "Hey, lets talk" } ,
                 new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/200/200" } ,
 
             };
-
-            listView.ItemsSource = _contacts;
         }
+       
+
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -53,6 +59,12 @@ namespace Tutorial1.Lists
         {
             var contact = (sender as MenuItem).CommandParameter as Contact;
             _contacts.Remove(contact);
+        }
+
+        private void listView_Refreshing(object sender, EventArgs e)
+        {
+            listView.ItemsSource = GetContacts();
+            listView.EndRefresh();
         }
     }
 }
