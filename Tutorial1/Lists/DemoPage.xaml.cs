@@ -24,15 +24,25 @@ namespace Tutorial1.Lists
         }
 
 
-        ObservableCollection<Contact> GetContacts()
+        ObservableCollection<Contact> GetContacts(string seachText = null)
         {
-            return new ObservableCollection<Contact>
+            var contacts = new ObservableCollection<Contact>
             {
                 new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/200/202" },
                 new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/200/201", Status = "Hey, lets talk" } ,
                 new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/200/200" } ,
 
             };
+
+            if (String.IsNullOrWhiteSpace(seachText))
+            {
+                return contacts;
+            }
+
+            var result = new ObservableCollection<Contact>(contacts.Where(contact => contact.Name.StartsWith(seachText)));
+
+            return result;
+
         }
        
 
@@ -65,6 +75,11 @@ namespace Tutorial1.Lists
         {
             listView.ItemsSource = GetContacts();
             listView.EndRefresh();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            listView.ItemsSource = GetContacts(e.NewTextValue);
         }
     }
 }
