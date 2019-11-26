@@ -16,20 +16,26 @@ namespace Tutorial1.Lists
         {
             InitializeComponent();
 
-            
 
-            listView.ItemsSource = new List<ContactGroup>
+
+            listView.ItemsSource = new List<Contact>
             {
-                new ContactGroup("H", "H"){
-                    new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/200/202"}
-                },
-                new ContactGroup("Z", "Z"){
-                    new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/200/201", Status = "Hey, lets talk"} 
-                },
-                new ContactGroup("L", "L"){
-                    new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/200/200"} 
-                }
+                    new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/200/202"},
+                    new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/200/201", Status = "Hey, lets talk"} ,
+                    new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/200/200"} ,
+
             };
+        }
+
+        private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var contact = e.Item as Contact;
+            DisplayAlert("Tapped", contact.Name, "OK");
+        }
+
+        private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            listView.SelectedItem = null;
         }
     }
 }
