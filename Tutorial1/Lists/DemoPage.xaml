@@ -6,6 +6,12 @@
              mc:Ignorable="d"
              x:Class="Tutorial1.Lists.DemoPage">
 
-    <ListView x:Name="listView" SeparatorColor="BlueViolet"/>
+    <ListView x:Name="listView" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>
