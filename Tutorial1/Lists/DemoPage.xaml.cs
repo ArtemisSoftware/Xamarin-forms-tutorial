@@ -20,9 +20,9 @@ namespace Tutorial1.Lists
 
             listView.ItemsSource = new List<Contact>
             {
-                new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/400/300"},
-                new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/400/301", Status = "Hey, lets talk"},
-                new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/400/302"}
+                new Contact { Name = "Huguinho", ImageUrl = "https://lorempixel.com/400/200/people"},
+                new Contact { Name = "Zezinho", ImageUrl = "https://lorempixel.com/400/200/people", Status = "Hey, lets talk"},
+                new Contact { Name = "Luisinho", ImageUrl = "https://lorempixel.com/400/200/people"}
             };
         }
     }
