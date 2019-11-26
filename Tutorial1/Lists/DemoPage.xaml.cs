@@ -18,11 +18,17 @@ namespace Tutorial1.Lists
 
             
 
-            listView.ItemsSource = new List<Contact>
+            listView.ItemsSource = new List<ContactGroup>
             {
-                new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/200/202"},
-                new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/200/201", Status = "Hey, lets talk"},
-                new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/200/200"}
+                new ContactGroup("H", "H"){
+                    new Contact { Name = "Huguinho", ImageUrl = "https://placekitten.com/200/202"}
+                },
+                new ContactGroup("Z", "Z"){
+                    new Contact { Name = "Zezinho", ImageUrl = "https://placekitten.com/200/201", Status = "Hey, lets talk"} 
+                },
+                new ContactGroup("L", "L"){
+                    new Contact { Name = "Luisinho", ImageUrl = "https://placekitten.com/200/200"} 
+                }
             };
         }
     }
