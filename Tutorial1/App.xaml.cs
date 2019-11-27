@@ -1,6 +1,7 @@
 ﻿using System;
 using Tutorial1.Images;
 using Tutorial1.Lists;
+using Tutorial1.Navigation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,11 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new DemoPage();
+            MainPage = new NavigationPage(new WelcomePage())
+            {
+                BarBackgroundColor = Color.Gray,
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()
