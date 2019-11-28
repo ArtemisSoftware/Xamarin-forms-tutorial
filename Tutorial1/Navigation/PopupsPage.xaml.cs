@@ -23,7 +23,7 @@ namespace Tutorial1.Navigation
             var response = await DisplayAlert("Warning", "Are you sure?", "Yes", "No");
             if (response)
             {
-                DisplayAlert("Done", "You are sure", "OK");
+                await DisplayAlert("Done", "You are sure", "OK");
             }
 
         }

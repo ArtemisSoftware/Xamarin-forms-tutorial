@@ -13,7 +13,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new PopupsPage();
+            MainPage = new NavigationPage(new ToolbarPage());
         }
         protected override void OnStart()
         {
