@@ -13,7 +13,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new CarrosselPage();
+            MainPage = new PopupsPage();
         }
         protected override void OnStart()
         {
