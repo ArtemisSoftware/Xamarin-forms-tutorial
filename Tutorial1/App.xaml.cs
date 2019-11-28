@@ -13,7 +13,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ContactsPage());
+            MainPage = new ContactsPage();
         }
         protected override void OnStart()
         {
