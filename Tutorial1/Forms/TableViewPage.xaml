@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Tutorial1.Extensions"
              mc:Ignorable="d"
              x:Class="Tutorial1.Forms.TableViewPage">
 
@@ -14,12 +15,8 @@
                 <EntryCell Label="Title" Placeholder="(eg Shopping"></EntryCell>
                 <SwitchCell Text="Notifications" On="true" />
 
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="13, 0">
-                        <Label Text="Starts" VerticalOptions="Center"/>
-                        <DatePicker Date="1 Jan 2016" HorizontalOptions="EndAndExpand"></DatePicker>
-                    </StackLayout>
-                </ViewCell>
+                <local:DateCell Label="Starts"/>
+                <local:DateCell Label ="Ends"/>
             </TableSection>
         </TableRoot>
         
