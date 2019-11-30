@@ -12,11 +12,22 @@
         <TableRoot>
             <TableSection Title="Basics">
                 <TextCell Text="Name" Detail="Huguinho"></TextCell>
-                <EntryCell Label="Title" Placeholder="(eg Shopping"></EntryCell>
+                <EntryCell Label="Title" Placeholder="(eg Shopping)"></EntryCell>
                 <SwitchCell Text="Notifications" On="true" />
 
                 <local:DateCell Label="Starts"/>
                 <local:DateCell Label ="Ends"/>
+                <ViewCell Tapped="ViewCell_Tapped">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Contact Method" VerticalOptions="Center" />
+                        <Label 
+							x:Name="contactMethod"
+							VerticalOptions="Center" 
+							HorizontalOptions="EndAndExpand" 
+							Text="None" 
+							TextColor="Gray" />
+                    </StackLayout>
+                </ViewCell>
             </TableSection>
         </TableRoot>
         
