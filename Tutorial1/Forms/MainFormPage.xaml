@@ -4,10 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Padding="20"
              x:Class="Tutorial1.Forms.MainFormPage">
 
     <StackLayout>
         <Switch IsToggled="true" x:Name="switch"></Switch>
         <Label Text="Content" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}"/>
+
+        <Slider x:Name="slider"  Maximum="255" Minimum="10" Value="50"/>
+        <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}"/>
+        
     </StackLayout>
 </ContentPage>
