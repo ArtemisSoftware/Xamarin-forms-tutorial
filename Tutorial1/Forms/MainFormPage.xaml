@@ -23,5 +23,9 @@
 
         <Editor BackgroundColor="Yellow"/>
 
+        <Picker x:Name="contactMethods" Title="Contact Method" SelectedIndexChanged="Picker_SelectedIndexChanged">
+            
+        </Picker>
+
     </StackLayout>
 </ContentPage>
