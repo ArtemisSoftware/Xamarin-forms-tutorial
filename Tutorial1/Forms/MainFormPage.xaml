@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Padding="20"
+             Padding="40"
              x:Class="Tutorial1.Forms.MainFormPage">
 
     <StackLayout>
@@ -16,6 +16,12 @@
 
         <Stepper x:Name="stepper" Increment="5"/>
         <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"/>
+
+        <Entry Keyboard="Numeric" Placeholder="Phone" />
+        <Entry IsPassword="True" TextChanged="Entry_TextChanged" Placeholder="Password" />
+        <Label x:Name="label"/>
+
+        <Editor BackgroundColor="Yellow"/>
 
     </StackLayout>
 </ContentPage>

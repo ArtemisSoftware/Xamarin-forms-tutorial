@@ -18,5 +18,10 @@ namespace Tutorial1.Forms
         }
 
 
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            label.Text = e.NewTextValue;
+        }
     }
 }
