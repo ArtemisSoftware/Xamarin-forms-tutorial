@@ -1,4 +1,5 @@
 ﻿using System;
+using Tutorial1.Forms;
 using Tutorial1.Images;
 using Tutorial1.Lists;
 using Tutorial1.Navigation;
@@ -13,7 +14,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ToolbarPage());
+            MainPage = new NavigationPage(new TableViewPage());
         }
         protected override void OnStart()
         {
