@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              Padding="40"
              x:Class="Tutorial1.Forms.MainFormPage">
@@ -23,9 +24,10 @@
 
         <Editor BackgroundColor="Yellow"/>
 
-        <Picker x:Name="contactMethods" Title="Contact Method" SelectedIndexChanged="Picker_SelectedIndexChanged">
-            
-        </Picker>
+        <Picker x:Name="contactMethods" Title="Contact Method" SelectedIndexChanged="Picker_SelectedIndexChanged"/>
+
+        <DatePicker Format="d MMM yyyy" Date="{x:Static sys:DateTime.Now}"/>
+        <TimePicker Time="13:00"/>
 
     </StackLayout>
 </ContentPage>
