@@ -14,7 +14,7 @@ namespace Tutorial1
         {
             InitializeComponent();
 
-            MainPage = new MainFormPage();
+            MainPage = new TableViewPage();
         }
         protected override void OnStart()
         {
